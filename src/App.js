@@ -16,19 +16,23 @@ import Counter from "./components/counter/counter";
 import UserTS from "./components/tsConcepts/user";
 import Container from "./components/learningClassBased/container";
 import AutoSuggest from "./components/autosuggest/Autosuggest";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 
 function App(props) {
 	return (
 		<div className="App">
-			<h1>Test app react</h1>
-			{/* <DynamicForm /> */}
-			{/* <UseMemoHook /> */}
-			{/* <UseCallBackHook /> */}
-			{/* <SlideShow /> */}
-			<Counter />
-			{/* <UserTS heading="my title" extraText={55} /> */}
-			{/* <Container /> */}
-			{/* <AutoSuggest suggestionsArray={["dog", "cat", "lion", "rabbit"]} /> */}
+			<ErrorBoundary>
+				<h1>Test app react</h1>
+				{/* <DynamicForm /> */}
+				{/* <UseMemoHook /> */}
+				{/* <UseCallBackHook /> */}
+				{/* <SlideShow /> */}
+				{/* <Counter /> */}
+				{/* <UserTS heading="my title" extraText={55} /> */}
+				{/* <Container /> */}
+				<FormConcept />
+				{/* <AutoSuggest suggestionsArray={["dog", "cat", "lion", "rabbit"]} /> */}
+			</ErrorBoundary>
 		</div>
 	);
 }

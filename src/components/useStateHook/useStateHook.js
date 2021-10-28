@@ -73,10 +73,14 @@ export default UseStateHook;
 // function initializer() {
 //     return Math.random();
 //   }
-// you can pass a function which calls initializer as an argument, like:
+// 1.you can pass a function which calls initializer as an argument, like:
 //  -----------const [state, setState] = React.useState(() => initializer());
-// or else pass initializer to useState without invoking it like:
+// 2.or else pass initializer to useState without invoking it like:
 //  -----------const [state, setState] = React.useState(initializer);
 
 // The above two approaches ensure initializer is invoked on
 // first render but ignored in subsequent re-renders.
+
+// 3.-----------const [state, setState] = React.useState(initializer());
+// The initial state is ignored in subsequent renders but the
+// initializer which is used for initializing it is invoked in every re-render.

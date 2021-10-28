@@ -51,3 +51,24 @@ export default UseMemoHook;
 
 // But if dependencies change during re-rendering, then useMemo()
 // invokes compute, memoizes the new value, and returns it.
+
+// ---------------Memoization-----------
+
+// We just return the cached result if calling a function
+// with the same parameters without recalculating
+
+// But the requirement is that the function is a pure function
+
+// -----------------Pure Function
+// The function always returns the same result if the same arguments are passed in.
+
+// 1.It does not depend on any state, or data, change during a program’s execution.
+// It must only depend on its input arguments.
+
+// 2.The function does not produce any observable side effects such as
+// network requests, input and output devices, or data mutation.
+
+//----------------- How to prevent re rendring in child components
+// const MyComponent = React.memo(function MyComponent(props) {
+//   /* render using props */
+// });
